@@ -3,6 +3,7 @@ Technology Engineering Computation
 
 
 The Environment (REPL): The prompt P is loaded as a string variable context inside a Python Read-Eval-Print Loop.
+
 The Interface: The Model is given a system prompt explaining it has access to context and a special function llm_query(sub_prompt).
 
 
