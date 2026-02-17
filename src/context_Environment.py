@@ -18,6 +18,7 @@ class ContextEnvironment:
      # chunk[i] = full_text[4000*i:4000*i+1]
    # elif len(full_text)/4000=<i:
      # chunk[i] = full_text[4000*i:]
+   # break
    # i++
 
 
