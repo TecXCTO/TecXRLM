@@ -19,9 +19,9 @@ When you want to execute Python code in the REPL environment, wrap it in triple 
 language identifier. For example, say we want our recursive model to search for the magic number in the context (assuming the context is a string), and the context is very long, so we want to chunk it:
 ```
 repl
-chunk - contextl:10000]
-answer - lIm_query(f"Nhat is the magic number in the context? Here is the chunk: ((chunk))")
-print (answer)
+chunk = context[:10000]
+answer = lIm_query(f"Nhat is the magic number in the context? Here is the chunk: ((chunk))")
+print(answer)
 ```
 
 
