@@ -1,7 +1,8 @@
 # Context Environment
 import model as model
-class ContextEnvironment:
-  def __init__(self,**args,*arg,model):
+class ContextEnvironment(repl):
+  def __init__(self,*args,**kwargs,model):
+    # super.__init__()
     self.huge_doc=[]
     self.model=model
   def prompt(self,user_input):
