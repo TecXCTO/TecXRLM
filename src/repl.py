@@ -22,3 +22,8 @@ def recursive_summarize(text, model):
     
     # Aggregation Step
     return model.generate(f"Combine these two summaries: {left_summary} and {right_summary}")
+      
+# repl
+# chunk = context[:10000]
+# answer = lIm_query(f"Nhat is the magic number in the context? Here is the chunk: ((chunk))")
+# print(answer)
