@@ -1,0 +1,4 @@
+rlm-core
+torch
+rlm-core[modal,e2b,prime]
+safetensors
