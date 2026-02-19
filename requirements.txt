@@ -1,8 +1,8 @@
 rlm-core
 torch
-rlm-core[modal,e2b,prime]
 safetensors
 pytest
+rlm-core[modal,e2b,prime]
 ruff
 pre-commit
 rlm-core[daytona,dill]
