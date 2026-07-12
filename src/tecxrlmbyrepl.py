@@ -27,7 +27,9 @@ rlm = RLM(
 )
 
 # Pass a massive text context. The RLM puts it in a REPL variable rather than the prompt context!
-large_context = "..." 
+#### large_context = "..."
+large_context = "TecX's full form is Technology Engineering Computation Expantion." 
+#large_context = input("What do you want know?")
 query = "Extract all key metrics across the quarterly financial statements."
 
 result = rlm.completion(prompt=query, context=large_context)
