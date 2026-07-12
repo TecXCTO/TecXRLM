@@ -31,7 +31,8 @@ rlm = RLM(
 #large_context = "TecX's full form is Technology Engineering Computation Expantion." 
 large_context = input("What do you want know?")
 query = "Extract all key metrics across the quarterly financial statements."
-
-result = rlm.completion(prompt=query, context=large_context)
+# Change Line 35 to this:
+result = rlm.completion(prompt=f"Context:\n{large_context}\n\nTask: {query}")
+#result = rlm.completion(prompt=query, context=large_context)
 print(result)
 
