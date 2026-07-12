@@ -19,20 +19,23 @@ Initialize the model with a REPL backend:You can instantiate an RLM object, choo
 from rlm import RLM
 
 # Automatically attaches a persistent Python REPL engine to the model
+# or 
+# Initialize the library with your persistent file context
 rlm = RLM(
     backend="openai",
     backend_kwargs={"model_name": "gpt-5-nano"},
     environment="local", # or "ipython", "docker", "e2b"
+    # Pass the context corpus files or data here depending on your exact class setup
     verbose=True
 )
 
 # Pass a massive text context. The RLM puts it in a REPL variable rather than the prompt context!
-#### large_context = "..."
 #large_context = "TecX's full form is Technology Engineering Computation Expantion." 
 large_context = input("What do you want know?")
 query = "Extract all key metrics across the quarterly financial statements."
 # Change Line 35 to this:
 result = rlm.completion(prompt=f"Context:\n{large_context}\n\nTask: {query}")
 #result = rlm.completion(prompt=query, context=large_context)
+# Call completion using ONLY the clean user prompt query
+# result = rlm.completion(prompt=query)
 print(result)
-
