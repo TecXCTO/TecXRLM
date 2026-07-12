@@ -70,3 +70,7 @@ class RLMOrchestrator:
 """
 Key Rules for Production Safety ⚠️If you deploy this architecture into a live production workflow, avoid using raw exec() on your host machine. Because the RLM generates code autonomously, execute the model's REPL steps using sandbox infrastructure, such as:Docker containers via Docker SDK for Python.Dedicated agent micro-sandboxes like the E2B Development Environment.Are you aiming to integrate an active cloud platform like E2B/Docker for production security, or are you looking to implement the recursive "sub-agent" feature where the REPL spawns smaller model calls to look at the data slices?
 """
+
+if "__name__" == "__main__":
+    ro = RLMOrchestrator("TecX's full form is Technology Engineering Computation Expantion.")
+    r = ro.run_inference_loop("what is  TecX.")
